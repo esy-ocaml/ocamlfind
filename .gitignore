@@ -21,3 +21,7 @@ src/findlib/ocamlfind
 src/findlib/topfind
 src/findlib/topfind.ml
 tools/extract_args/extract_args
+
+_build/
+_install/
+node_modules/

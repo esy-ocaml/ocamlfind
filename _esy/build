@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -euo pipefail
+set -x
+
+#
+# Shim OCAMLLIB so that we can write topfind there
+#
+
+mkdir -p $cur__lib/ocaml
+cd $cur__lib/ocaml
+
+for filename in `ls -1 $ocaml__lib/ocaml`; do
+  ln -s $ocaml__lib/ocaml/$filename $filename;
+done
+
+#
+# Build
+#
+
+cd $cur__root
+
+export OCAMLLIB="$cur__lib/ocaml"
+
+./configure \
+  -bindir $cur__bin \
+  -sitelib $cur__lib \
+  -mandir $cur__man \
+  -config $cur__lib/findlib.conf \
+  -no-custom \
+  -no-camlp4
+
+make all
+make opt
+make install
+
+(opam-installer --prefix=$cur__install || true)
