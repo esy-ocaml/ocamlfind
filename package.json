@@ -1,5 +1,5 @@
 {
-    "name": "@opam/ocamlfind",
+    "name": "@opam-alpha/ocamlfind",
     "version": "1.7.1",
     "opam": {
         "url": "http://download.camlcity.org/download/findlib-1.7.1.tar.gz"
@@ -9,15 +9,15 @@
         "buildsInSource": true,
         "exportedEnv": {
             "OCAMLLIB": {
-              "val": "$opam_ocamlfind__lib/ocaml",
+              "val": "$opam_alpha_ocamlfind__lib/ocaml",
               "scope": "global"
             },
             "CAML_LD_LIBRARY_PATH": {
-              "val": "$opam_ocamlfind__lib/ocaml/stublibs:$opam_ocamlfind__lib/ocaml:$CAML_LD_LIBRARY_PATH",
+              "val": "$opam_alpha_ocamlfind__lib/ocaml/stublibs:$opam_alpha_ocamlfind__lib/ocaml:$CAML_LD_LIBRARY_PATH",
               "scope": "global"
             },
             "OCAML_TOPLEVEL_PATH": {
-              "val": "$opam_ocamlfind__lib/ocaml",
+              "val": "$opam_alpha_ocamlfind__lib/ocaml",
               "scope": "global"
             },
             "ocamlfind_installed": {
@@ -36,7 +36,7 @@
     },
     "dependencies": {
         "substs": "esy-ocaml/substs",
-        "@opam/conf-m4": "*",
+        "@opam-alpha/conf-m4": "*",
         "opam-installer-bin": "esy-ocaml/opam-installer-bin"
     },
     "scripts": {},
