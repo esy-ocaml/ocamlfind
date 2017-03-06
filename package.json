@@ -9,15 +9,15 @@
         "buildsInSource": true,
         "exportedEnv": {
             "OCAMLLIB": {
-              "val": "$cur__lib/ocaml",
+              "val": "$opam_alpha_ocamlfind__lib/ocaml",
               "scope": "global"
             },
             "CAML_LD_LIBRARY_PATH": {
-              "val": "$cur__lib/ocaml/stublibs:$cur__lib/ocaml:$CAML_LD_LIBRARY_PATH",
+              "val": "$opam_alpha_ocamlfind__lib/ocaml/stublibs:$opam_alpha_ocamlfind__lib/ocaml:$CAML_LD_LIBRARY_PATH",
               "scope": "global"
             },
             "OCAML_TOPLEVEL_PATH": {
-              "val": "$cur__lib/ocaml",
+              "val": "$opam_alpha_ocamlfind__lib/ocaml",
               "scope": "global"
             },
             "ocamlfind_installed": {
