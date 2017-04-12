@@ -7,11 +7,13 @@ set -x
 # Shim OCAMLLIB so that we can write topfind there
 #
 
+REAL_OCAMLLIB="$1"
+
 mkdir -p $cur__install/lib/ocaml
 cd $cur__install/lib/ocaml
 
-for filename in `ls -1 $ocaml__install/lib/ocaml`; do
-  ln -s $ocaml__install/lib/ocaml/$filename $filename;
+for filename in `ls -1 $REAL_OCAMLLIB`; do
+  ln -s $REAL_OCAMLLIB/$filename $filename;
 done
 
 #

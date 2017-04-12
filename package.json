@@ -5,7 +5,7 @@
         "url": "http://download.camlcity.org/download/findlib-1.7.1.tar.gz"
     },
     "esy": {
-        "build": "bash ./_esy/build",
+        "build": "bash ./_esy/build $ocaml__lib/ocaml",
         "buildsInSource": true,
         "exportedEnv": {
             "OCAMLLIB": {
