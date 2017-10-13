@@ -1,0 +1,46 @@
+{
+  "name": "@opam-alpha/ocamlfind",
+  "version": "1.7.3",
+  "esy": {
+    "build": "bash ./_esy/build $ocaml__lib/ocaml",
+    "buildsInSource": true,
+    "exportedEnv": {
+      "OCAMLLIB": {
+        "val": "$opam_alpha__slash__ocamlfind__install/lib/ocaml",
+        "scope": "global"
+      },
+      "CAML_LD_LIBRARY_PATH": {
+        "val": "$opam_alpha__slash__ocamlfind__install/lib/ocaml/stublibs:$opam_alpha__slash__ocamlfind__install/lib/ocaml:$CAML_LD_LIBRARY_PATH",
+        "scope": "global"
+      },
+      "OCAML_TOPLEVEL_PATH": {
+        "val": "$opam_alpha__slash__ocamlfind__install/lib/ocaml",
+        "scope": "global"
+      },
+      "ocamlfind_installed": {
+        "scope": "global",
+        "val": "true"
+      },
+      "ocamlfind_version": {
+        "scope": "global",
+        "val": "1.7.3"
+      },
+      "ocamlfind_enable": {
+        "scope": "global",
+        "val": "enable"
+      }
+    }
+  },
+  "dependencies": {
+    "substs": "esy-ocaml/substs",
+    "@opam-alpha/conf-m4": "*",
+    "opam-installer-bin": "esy-ocaml/opam-installer-bin"
+  },
+  "devDependencies": {
+    "ocaml": "esy-ocaml/ocaml#esy"
+  },
+  "scripts": {},
+  "peerDependencies": {
+    "ocaml": ">= 3.12.0"
+  }
+}
